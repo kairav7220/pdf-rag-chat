@@ -1,0 +1,42 @@
+pypdf
+unstructured
+beautifulsoup4
+lxml
+
+# Text Processing
+tiktoken
+
+# Environment Variables
+python-dotenv
+
+# Data Handling
+pandas
+numpy
+
+# --- Core LangChain Framework ---
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+langchain-classic
+langchain-experimental
+
+# --- LLM Providers & Integrations ---
+langchain-groq
+langchain-google-genai
+langchain-mistralai
+
+# --- Vector Database & Embeddings ---
+chromadb
+sentence-transformers
+
+# API / App Layer
+fastapi
+uvicorn
+requests
+arxiv
+
+# --- UI & Utilities ---
+streamlit
+tqdm
