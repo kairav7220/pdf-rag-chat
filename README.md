@@ -111,6 +111,8 @@ streamlit run app.py
 pdf-rag-chat/
 ├── app.py              # Streamlit app (ingestion + chat)
 ├── requirements.txt    # Python dependencies
+├── CONTRIBUTING.md     # Contribution guide
+├── llms.txt            # AI assistant context
 ├── .gitignore
 └── LICENSE
 ```
