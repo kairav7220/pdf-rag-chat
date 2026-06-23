@@ -1,0 +1,27 @@
+# PDF RAG Chat
+
+## Description
+Chat with your PDFs using RAG with Chroma vector search and Groq LLM.
+
+## Tech Stack
+Python 3.11, Streamlit, LangChain, ChromaDB, Groq (llama-3.3-70b-versatile), HuggingFace Embeddings (all-MiniLM-L6-v2), PyPDFLoader
+
+## Core Files
+- app.py: Single-file Streamlit app (<120 lines) — PDF ingestion, vector store, chat
+
+## Key Patterns
+- Ingestion: PyPDFLoader → RecursiveCharacterTextSplitter(chunk=1000, overlap=200) → HuggingFaceEmbeddings → Chroma
+- Retrieval: vectorstore.as_retriever(search_type="mmr", k=5, fetch_k=15, lambda_mult=0.5)
+- Generation: ChatPromptTemplate (System + Context + Question) → ChatGroq → response.content
+- Multi-file support: accept_multiple_files=True in st.file_uploader
+
+## Entry Point
+streamlit run app.py
+
+## API Keys (.env)
+GROQ_API_KEY
+
+## Environment
+- No persistence (in-memory Chroma per session)
+- Chat history in st.session_state.messages
+- Ignores chroma_db/, chroma-db/, vector store/ in gitignore
