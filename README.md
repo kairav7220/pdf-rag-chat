@@ -128,6 +128,6 @@ MIT © [kairav7220](https://github.com/kairav7220)
 <p align="center">
   Built with <a href="https://python.langchain.com">LangChain</a> ·
   <a href="https://www.trychroma.com">ChromaDB</a> ·
-  <a href="https://groq.com">Groq</a> 
+  <a href="https://groq.com">Groq</a> ·
   <a href="https://huggingface.co/sentence-transformers">Sentence Transformers</a>
 </p>
