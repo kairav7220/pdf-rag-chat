@@ -21,6 +21,7 @@
   <img src="https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white" alt="Python 3.11"/>
   <img src="https://img.shields.io/badge/LangChain-RAG-important?logo=langchain" alt="LangChain"/>
   <img src="https://img.shields.io/badge/ChromaDB-Vector-green" alt="ChromaDB"/>
+  <img src="https://img.shields.io/badge/HuggingFace-all--MiniLM--L6--v2-orange?logo=huggingface" alt="all-MiniLM-L6-v2"/>
   <img src="https://img.shields.io/badge/Groq-llama--3.3--70b-orange" alt="Groq"/>
   <img src="https://img.shields.io/badge/Streamlit-UI-red?logo=streamlit&logoColor=white" alt="Streamlit"/>
   <img src="https://img.shields.io/badge/MMR-Retrieval-blueviolet" alt="MMR"/>
