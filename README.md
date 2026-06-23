@@ -14,8 +14,7 @@
   <a href="#quick-start">Quick Start</a> ·
   <a href="#usage">Usage</a> ·
   <a href="#project-structure">Structure</a> ·
-  <a href="#comparison">Comparison</a> ·
-  <a href="#contributing">Contributing</a>
+  <a href="#comparison">Comparison</a>
 </p>
 
 <p align="center">
@@ -30,13 +29,14 @@
 
 ---
 
+Upload PDFs and ask questions using RAG with Chroma vector search and Groq LLM.
+
 ## Features
 
 - **Multi-PDF Ingestion** — Upload one or more PDFs, search across all at once
 - **RAG Pipeline** — Retrieve relevant chunks, generate grounded answers
 - **MMR Retrieval** — Maximum Marginal Relevance for diverse, relevant context
 - **Groq Llama 3.3 70B** — Fast, high-quality inference
-- **Persistent Chat** — Session history within the Streamlit session
 - **ChromaDB** — Lightweight, local vector store (no external infra needed)
 
 ## Architecture
@@ -84,31 +84,16 @@ Set your API key in `.env`:
 GROQ_API_KEY="gsk_..."
 ```
 
-Run the app:
-
 ```bash
 streamlit run app.py
 ```
 
-Upload a PDF in the sidebar, then ask questions about it.
-
 ## Usage
 
-1. **Upload PDFs** — Click the sidebar uploader (multiple files supported)
-2. **Wait for indexing** — Status bar shows progress
-3. **Ask questions** — Type anything in the chat input
-4. **Get answers** — LLM responds using only the retrieved context
-
-> If the context doesn't contain the answer, the model says "I don't know" — no hallucination.
-
-## When to Use
-
-| Do | Don't |
-|---|---|
-| Extracting answers from reports, manuals, papers | Scanned/image-only PDFs (no OCR) |
-| Prototyping RAG over documents | Production workloads (no auth, no persistence) |
-| Learning LangChain RAG patterns | Real-time streaming responses |
-| Small-to-medium docs (< 500 pages total) | 1000+ page document corpora |
+1. Upload PDFs in the sidebar (multiple supported)
+2. Wait for indexing to complete
+3. Ask questions in the chat input
+4. LLM responds using only the retrieved context — says "I don't know" if missing
 
 ## Comparison
 
@@ -118,7 +103,7 @@ Upload a PDF in the sidebar, then ask questions about it.
 | Multiple PDFs | ✅ Single upload | ❌ One at a time | ✅ |
 | MMR Retrieval | ✅ Built-in | ❌ Manual | ✅ |
 | Vector Store | ChromaDB | Any | Any |
-| Setup Time | ~2 min | ~10 min | ~10 min |
+
 
 ## Project Structure
 
@@ -127,7 +112,7 @@ pdf-rag-chat/
 ├── app.py              # Streamlit app (ingestion + chat)
 ├── requirements.txt    # Python dependencies
 ├── .gitignore
-└── LICENSE             # MIT
+└── LICENSE
 ```
 
 Single-file app — everything in `app.py` (under 120 lines).
